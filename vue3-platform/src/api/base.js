@@ -3,8 +3,8 @@
  */
 
 const base = { 
-    baseUrl: "http://localhost:3000",
-    login: "/api/login"
+    baseUrl: "http://localhost:6001",
+    login: "/oauth/mobile/password"
 }
 
 export default base;

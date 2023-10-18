@@ -37,14 +37,18 @@ const router = useRouter()
 // 声明用户信息
 const user = reactive({
   mobile: "",
-  password: ""
+  password: "",
+  appId: "DSP_DEV_WEB",
+  appSecret: "6a9c233f-d2c1-4bff-b93d-093663b23c0a"
 })
 
 // 登录事件
 const handleLogin = () =>{
     api.getLogin({
       mobile: user.mobile,
-      password: user.password
+      password: user.password,
+      appId: user.appId,
+      appSecret: user.appSecret
     }).then(res =>{
         //console.log(res);
         console.log(res.data);

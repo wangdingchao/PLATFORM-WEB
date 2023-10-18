@@ -35,11 +35,7 @@ const instance = axios.create({
 
 instance.interceptors.request.use(
     config =>{
-    config.headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8'
-
-        if(config.method === 'post' || config.method === "put"){
-            config.data = qs.stringify(config.data)
-        }
+    config.headers['Content-Type'] = 'application/json; charset=UTF-8'
         return config
     },
     error => Promise.reject(error)
